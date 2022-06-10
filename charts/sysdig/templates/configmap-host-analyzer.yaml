@@ -26,7 +26,7 @@ data:
   dirs_to_scan: {{ .Values.nodeAnalyzer.hostAnalyzer.dirsToScan }}
   {{- end }}
   {{- if .Values.nodeAnalyzer.hostAnalyzer.maxSendAttempts }}
-  max_send_attempts: {{ .Values.nodeAnalyzer.hostAnalyzer.maxSendAttempts }}
+  max_send_attempts: {{ .Values.nodeAnalyzer.hostAnalyzer.maxSendAttempts | quote }}
   {{- end }}
   {{- if .Values.nodeAnalyzer.httpProxy }}
   http_proxy: {{ .Values.nodeAnalyzer.httpProxy }}
